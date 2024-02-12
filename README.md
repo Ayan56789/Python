@@ -1,2 +1,2 @@
 # Python
-For python programming
+Print("Hello world!")
