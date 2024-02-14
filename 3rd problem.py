@@ -98,3 +98,4 @@ for i in range(len(EigenValue)):
     plt.grid(True, color = "grey", linewidth = "1.4", linestyle = "-.")
     
 plt.show()
+
