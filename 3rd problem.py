@@ -73,8 +73,8 @@ def zero(x, psi):
             energyEigenValue.append(zero)
     return energyEigenValue
 EigenValue = np.array(zero(En, psiRight))
-EigenValue
-array([ 31.55704024,  92.01776957, 144.81662013])
+print(EigenValue)
+
 fig = plt.figure(figsize=(5, 10))
 fig.subplots_adjust(hspace=0.4, wspace=0.4)
 j=1
@@ -86,7 +86,11 @@ for i in range(len(EigenValue)):
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
     ax.spines['bottom'].set_position('zero')
-    #plt.legend()
+    plt.legend()
+    plt.axhline(lw=2.3, c='black')
+    plt.axvline(lw=2.3, c='black')
+    plt.xticks(size=15)
+    plt.yticks(size=15)
     plt.xlabel('$r$', fontsize=14)
     plt.ylabel('$\psi(r)$', fontsize=14)
     j+=1
