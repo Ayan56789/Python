@@ -83,7 +83,7 @@ for i in range(len(eigenValue)):
     plt.yticks(size=15)
     plt.plot(r, sol[:,0], color=color[i], lw=3, label='n = '+str(i)+'   E'+str(i)+' = '+str(round(eigenValue[i],1)))
 
-
+plt.title('Plotting of wavefunctions', size = 25)
 plt.xlabel('r', size=25)
 plt.ylabel('$\psi(r)$', size=20)
 plt.legend(fontsize=15)
