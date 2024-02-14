@@ -76,9 +76,8 @@ def zero(x, psi):
             energyEigenValue.append(zero)
     return energyEigenValue
 EigenValue = np.array(zero(En, psiRight))
-EigenValue
-array([ 1.21457505,  2.10732938,  3.2543345 ,  4.65597459,  6.31235437,
-        8.22351125, 10.389463  , 12.81021612])
+print(EigenValue)
+
 fig = plt.figure(figsize=(5, 15))
 fig.subplots_adjust(hspace=0.4, wspace=0.4)
 j=1
@@ -86,7 +85,11 @@ for i in range(len(EigenValue)):
     ax = fig.add_subplot(len(EigenValue), 1, j)
     waveFunc(EigenValue[i])
     plt.plot(r, psi.transpose()[0])
-    #plt.legend()
+    plt.axhline(lw=2.3, c='black')
+    plt.axvline(lw=2.3, c='black')
+    plt.xticks(size=15)
+    plt.yticks(size=15)
+    plt.legend()
     plt.xlabel('$r$', fontsize=14)
     plt.ylabel('$\psi(r)$', fontsize=14)
     j+=1
