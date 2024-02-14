@@ -85,11 +85,12 @@ for i in range(len(EigenValue)):
     ax = fig.add_subplot(len(EigenValue), 1, j)
     waveFunc(EigenValue[i])
     plt.plot(r, psi.transpose()[0])
+    plt.title('Plotting of wavefunctions', size = 25)
     plt.axhline(lw=2.3, c='black')
     plt.axvline(lw=2.3, c='black')
     plt.xticks(size=15)
     plt.yticks(size=15)
-    plt.legend()
+    plt.legend(fontsize=15)
     plt.xlabel('$r$', fontsize=14)
     plt.ylabel('$\psi(r)$', fontsize=14)
     j+=1
