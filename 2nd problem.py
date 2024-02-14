@@ -51,8 +51,7 @@ for i in range(len(sign)-1):
         eigenValue += [en]
 
 print('Energy Eigen Values are \n'+str(eigenValue))
-Energy Eigen Values are
-[-11.06410939502324, -1.284295766697573]
+
 # Plotting wavefunctions
 
 def plot():
@@ -76,11 +75,16 @@ plot()
 color = ['red', 'blue', 'orange']
 for i in range(len(eigenValue)):
     waveFunc(eigenValue[i])
-    plt.plot(r, sol[:,0], color=color[i], label='n = '+str(i)+'   E'+str(i)+' = '+str(round(eigenValue[i],1)))
-
-plt.xlabel('r')
-plt.ylabel('$\psi(r)$')
+    plt.axhline(lw=2.3, c='black')
+    plt.axvline(lw=2.3, c='black')
+    plt.xticks(size=15)
+    plt.yticks(size=15)
+    plt.plot(r, sol[:,0], color=color[i], lw=3, label='n = '+str(i)+'   E'+str(i)+' = '+str(round(eigenValue[i],1)))
+    
+plt.title('Plotting of wavefunctions', size = 25)
+plt.xlabel('r', size=25)
+plt.ylabel('$\psi(r)$', size=20)
 plt.text(8,0.08, '$V(r)=\\frac{e^2}{r}e^{-r/a};  \\ a$ = '+str(a))
-plt.legend()
-#plt.grid()
+plt.legend(fontsize=15)
+plt.grid()
 plt.show()
