@@ -82,6 +82,7 @@ for i in range(len(EigenValue)):
     ax = fig.add_subplot(len(EigenValue), 1, j)
     waveFunc(EigenValue[i])
     plt.plot(r, psi.transpose()[0])
+    plt.title('Plotting of wavefunctions', size = 25)
     ax.spines['left'].set_position('zero')
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
